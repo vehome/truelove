@@ -409,6 +409,16 @@
                 mousemove(event);
                 reset();
                 loop();
+				var GameScore = Bmob.Object.extend("test");
+				var query = new Bmob.Query(GameScore);
+				query.first({
+				  success: function(object) {
+					document.getElementById("h1").innerHTML=object.get("context");
+				  },
+				  error: function(error) {
+					
+				  }
+				});
             }
 
             function reset() {
