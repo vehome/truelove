@@ -414,6 +414,8 @@
 				query.first({
 				  success: function(object) {
 					document.getElementById("h1").innerHTML=object.get("context");
+					letters('h1');
+					letters('h2');
 				  },
 				  error: function(error) {
 					
@@ -578,8 +580,7 @@
                     offset: 285
                 });
 
-                letters('h1');
-                letters('h2');
+                
 
                 document.addEventListener('mousemove', init);
                 document.addEventListener('touchstart', init);
